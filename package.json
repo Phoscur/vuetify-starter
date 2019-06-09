@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "lint": "vue-cli-service lint --fix",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit"
   },
@@ -36,7 +36,9 @@
     "sass-loader": "^7.1.0",
     "ts-jest": "^23.0.0",
     "typescript": "^3.4.3",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "vuetify": "^1.5.14",
+    "vuetify-scss": "^1.4.0"
   },
   "eslintConfig": {
     "root": true,
@@ -48,7 +50,9 @@
       "@vue/prettier",
       "@vue/typescript"
     ],
-    "rules": {},
+    "rules": {
+      "trailing-comma": true
+    },
     "parserOptions": {
       "parser": "@typescript-eslint/parser"
     }

@@ -1,10 +1,13 @@
 import Vue from "vue";
+import Vuetify from "vuetify";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "./registerServiceWorker";
 
-Vue.config.productionTip = false;
+// import 'vuetify/dist/vuetify.min.css';
+import "./theme.scss";
+Vue.use(Vuetify);
 
 new Vue({
   router,
