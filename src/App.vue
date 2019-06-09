@@ -72,7 +72,7 @@ import Vue from "vue";
 export default Vue.extend({
   name: "App",
   props: {
-    msg: String
+    msg: String,
   },
   data() {
     return {
@@ -81,14 +81,14 @@ export default Vue.extend({
       fixed: false,
       items: [
         { icon: "apps", title: "Welcome", to: "/" },
-        { icon: "bubble_chart", title: "Inspire", to: "/inspire" }
+        { icon: "bubble_chart", title: "Inspire", to: "/inspire" },
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: "Vuetify.js"
+      title: "Vuetify.js",
     };
-  }
+  },
 });
 </script>
 
