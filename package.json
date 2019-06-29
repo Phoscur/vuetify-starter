@@ -37,7 +37,8 @@
     "ts-jest": "^23.0.0",
     "typescript": "^3.4.3",
     "vue-template-compiler": "^2.6.10",
-    "vuetify": "^1.5.14",
+    "vuetify": "^2.0.0-beta.4",
+    "vuetify-loader": "^1.2.2",
     "vuetify-scss": "^1.4.0"
   },
   "postcss": {
