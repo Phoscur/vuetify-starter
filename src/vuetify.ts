@@ -22,7 +22,7 @@ Vue.use(Vuetify, {
     VFadeTransition,
   },
   directives: {
-    // Ripple,
+    Ripple,
   },
 });
 Vue.use(Vuetify);

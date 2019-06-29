@@ -4,28 +4,28 @@
       :mini-variant.sync="miniVariant"
       :clipped="clipped"
       v-model="drawer"
-      fixed
       app
+      :permanent="fixed"
     >
       <v-list>
-        <v-list-tile
+        <v-list-item
           router
           :to="item.to"
           :key="i"
           v-for="(item, i) in items"
           exact
         >
-          <v-list-tile-action>
+          <v-list-item-action>
             <v-icon v-html="item.icon"></v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title v-text="item.title"></v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar fixed app :clipped-left="clipped">
-      <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
+    <v-app-bar app fixed :clipped-left="clipped">
+      <v-icon @click="drawer = !drawer">menu</v-icon>
       <v-btn icon @click.stop="miniVariant = !miniVariant">
         <v-icon
           v-html="miniVariant ? 'chevron_right' : 'chevron_left'"
@@ -42,7 +42,7 @@
       <v-btn icon @click.stop="rightDrawer = !rightDrawer">
         <v-icon>menu</v-icon>
       </v-btn>
-    </v-toolbar>
+    </v-app-bar>
 
     <v-content>
       <v-container>
@@ -52,12 +52,12 @@
 
     <v-navigation-drawer temporary :right="right" v-model="rightDrawer" fixed>
       <v-list>
-        <v-list-tile @click.native="right = !right">
-          <v-list-tile-action>
+        <v-list-item @click.native="right = !right">
+          <v-list-item-action>
             <v-icon light>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
-        </v-list-tile>
+          </v-list-item-action>
+          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-footer :fixed="fixed">
@@ -77,7 +77,7 @@ export default Vue.extend({
   data() {
     return {
       clipped: false,
-      drawer: true,
+      drawer: null,
       fixed: false,
       items: [
         { icon: "apps", title: "Welcome", to: "/" },
