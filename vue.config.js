@@ -1,7 +1,9 @@
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 module.exports = {
   configureWebpack: {
-    plugins: [new VuetifyLoaderPlugin()],
+    plugins: [
+      new VuetifyLoaderPlugin(), // for custom dynamic imports see https://vuetifyjs.com/en/customization/a-la-carte#custom-dynamic-imports
+    ],
   },
   chainWebpack: config => {
     /*config.module
